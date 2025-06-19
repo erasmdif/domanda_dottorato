@@ -365,3 +365,56 @@ input:checked + .slider:before {
         padding-bottom: 10pt;
     }
 }
+/* Stili per il titolo e sottotitolo */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.subtitle a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.subtitle a:hover {
+    text-decoration: underline;
+}
+
+/* Stili per la stampa */
+@media print {
+    body {
+        zoom: 85%; /* Ridimensionamento globale per far stare tutto in un A4 */
+    }
+    
+    h1 {
+        font-size: 22pt;
+        margin-bottom: 10pt;
+    }
+    
+    .subtitle {
+        font-size: 10pt;
+        margin-bottom: 15pt;
+    }
+    
+    table {
+        font-size: 10pt; /* Riduci leggermente la dimensione del font */
+    }
+    
+    th, td {
+        padding: 8pt; /* Riduci il padding */
+    }
+    
+    .year-cell {
+        width: 12%; /* Riduci la larghezza della colonna anno */
+    }
+}

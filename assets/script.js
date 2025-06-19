@@ -348,91 +348,116 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Ottieni l'HTML della tabella
             const tableHTML = `
-            <!DOCTYPE html>
-            <html>
-            <head>
-                <title>Piano di Lavoro Dottorato</title>
-                <style>
-                    @page {
-                        size: A4;
-                        margin: 1.5cm;
-                        @top-left { content: none; }
-                        @top-right { content: none; }
-                        @bottom-left { content: none; }
-                        @bottom-center { content: none; }
-                        @bottom-right { content: none; }
-                    }
-                    body {
-                        font-family: "Helvetica Neue", Arial, sans-serif;
-                        line-height: 1.5;
-                        color: #000;
-                        font-size: 12pt;
-                        margin: 0;
-                        padding: 0;
-                    }
-                    table {
-                        width: 100%;
-                        border-collapse: collapse;
-                        margin-top: 20pt;
-                    }
-                    th, td {
-                        padding: 10pt;
-                        border: 1pt solid #ddd;
-                    }
-                    th {
-                        background: #2c3e50 !important;
-                        color: white !important;
-                        -webkit-print-color-adjust: exact;
-                        print-color-adjust: exact;
-                    }
-                    .first-year { 
-                        background-color: #e8f4fc !important; 
-                        -webkit-print-color-adjust: exact; 
-                        print-color-adjust: exact; 
-                    }
-                    .second-year { 
-                        background-color: #e8f8f5 !important; 
-                        -webkit-print-color-adjust: exact; 
-                        print-color-adjust: exact; 
-                    }
-                    .third-year { 
-                        background-color: #f9f2e8 !important; 
-                        -webkit-print-color-adjust: exact; 
-                        print-color-adjust: exact; 
-                    }
-                    h1 {
-                        text-align: center;
-                        font-size: 18pt;
-                        margin-bottom: 20pt;
-                        padding-top: 20pt;
-                    }
-                </style>
-            </head>
-            <body>
-                <h1>Piano di Lavoro Dottorato</h1>
-                ${document.querySelector('.printable-table').outerHTML}
-                <script>
-                    window.onload = function() {
-                        // Forza i margini per tutti i browser
-                        const style = document.createElement('style');
-                        style.innerHTML = '@page { size: auto; margin: 0mm; }';
-                        document.head.appendChild(style);
-                        
-                        setTimeout(function() {
-                            window.print();
-                            window.close();
-                        }, 200);
-                    };
-                </script>
-            </body>
-            </html>
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Cronoprogramma Dottorato</title>
+                    <style>
+                        @page {
+                            size: A4;
+                            margin: 5mm;
+                            @top-left { content: none; }
+                            @top-center { content: none; }
+                            @top-right { content: none; }
+                            @bottom-left { content: none; }
+                            @bottom-center { content: none; }
+                            @bottom-right { content: none; }
+                        }
+                        body {
+                            font-family: "Helvetica Neue", Arial, sans-serif;
+                            line-height: 1.25;
+                            color: #000;
+                            font-size: 9.5pt;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        .print-header {
+                            page-break-inside: avoid;
+                            margin-bottom: 5pt;
+                        }
+                        h1 {
+                            text-align: center;
+                            font-size: 20pt;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        .subtitle {
+                            text-align: center;
+                            font-size: 9pt;
+                            margin: 2pt 0 10pt;
+                            color: #555;
+                        }
+                        .subtitle a {
+                            color: #0066cc;
+                            text-decoration: underline;
+                        }
+                        table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            margin-top: 0;
+                            font-size: 9.5pt;
+                            page-break-inside: auto;
+                        }
+                        th, td {
+                            padding: 6pt;
+                            border: 1pt solid #ddd;
+                        }
+                        th {
+                            background: #2c3e50 !important;
+                            color: white !important;
+                            -webkit-print-color-adjust: exact;
+                            print-color-adjust: exact;
+                        }
+                        .first-year { 
+                            background-color: #e8f4fc !important; 
+                            -webkit-print-color-adjust: exact; 
+                            print-color-adjust: exact; 
+                        }
+                        .second-year { 
+                            background-color: #e8f8f5 !important; 
+                            -webkit-print-color-adjust: exact; 
+                            print-color-adjust: exact; 
+                        }
+                        .third-year { 
+                            background-color: #f9f2e8 !important; 
+                            -webkit-print-color-adjust: exact; 
+                            print-color-adjust: exact; 
+                        }
+                        .year-cell {
+                            font-weight: bold;
+                            width: 12%;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="print-header">
+                        <h1>Cronoprogramma</h1>
+                        <p class="subtitle">
+                        Per una migliore visualizzazione, visita: 
+                        <a href="https://erasmdif.github.io/domanda_dottorato/" target="_blank">
+                            https://erasmdif.github.io/domanda_dottorato/
+                        </a>
+                        </p>
+                    </div>
+                    ${document.querySelector('.printable-table').outerHTML}
+                    <script>
+                        window.onload = function() {
+                            setTimeout(function() {
+                                window.print();
+                                window.close();
+                            }, 200);
+                        };
+                    </script>
+                </body>
+                </html>
             `;
-
+            
             // Scrivi il contenuto nella finestra
             printWindow.document.open();
             printWindow.document.write(tableHTML);
             printWindow.document.close();
-            });
+        });
+
 
     
     
