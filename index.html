@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano di Lavoro Dottorato</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Piano di Lavoro Dottorato</h1>
+        
+        <div class="controls">
+            <div class="left-controls">
+                <div class="toggle-container">
+                    <span>Tabella</span>
+                    <label class="switch">
+                        <input type="checkbox" id="view-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Grafici</span>
+                </div>
+                
+                <button id="print-button" class="print-button">Stampa Tabella</button>
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="year-filter">Filtra per Anno:</label>
+                    <select id="year-filter" multiple>
+                        <option value="Primo anno" selected>Primo anno</option>
+                        <option value="Secondo anno" selected>Secondo anno</option>
+                        <option value="Terzo anno" selected>Terzo anno</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="type-filter">Filtra per Tipo:</label>
+                    <select id="type-filter" multiple>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+                
+                <button id="reset-filters">Reset Filtri</button>
+            </div>
+        </div>
+        
+        <div id="table-view" class="view active">
+            <div class="table-container printable-table">
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>Anno</th>
+                            <th>Lavoro</th>
+                            <th>Tipo di lavoro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table content will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div id="chart-view" class="view">
+            <div class="chart-container">
+                <div class="chart-wrapper">
+                    <canvas id="pie-chart"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="bar-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+Anno,lavoro,tipo di lavoro
+Primo anno,"Revisione dei dati esistenti e valutazione dello stato di digitalizzazione",Raccolta dati
+Primo anno,"Raccolta e digitalizzazione del materiale archivistico analogico",Raccolta dati
+Primo anno,"Recupero; pulizia e trasformazione dei dati digitali esistenti",Sistematizzazione
+Primo anno,"Uniformazione dei dati e normalizzazione secondo schema relazionale",Sistematizzazione
+Secondo anno,"Implementazione dati raccolti nel database centrale ArsDB",Sistematizzazione
+Secondo anno,"Implementazione e consolidamento del dato spaziale (CAD; GIS)",Raccolta dati
+Secondo anno,"Creazione del database relazionale completo in PostgreSQL/PostGIS",Produzione e coding
+Secondo anno,"Formazione tecnica su linguaggi e strumenti (Python; SQL; PostGIS)",Formazione personale
+Secondo anno,"Approfondimento di metodi statistici applicati all'archeologia",Formazione personale
+Secondo anno,"Disseminazione scientifica dei risultati preliminari (presentazioni; pubblicazioni; strumenti digitali)",Disseminazione e scrittura
+Terzo anno,"Sviluppo del framework operativo per la gestione e l'analisi dei dati",Produzione e coding
+Terzo anno,"Progettazione e implementazione di moduli statistici e spaziali",Produzione e coding
+Terzo anno,"Esecuzione delle analisi sui dati integrati (statistiche; distribuzioni; comparazioni)",Analisi dati
+Terzo anno,"Elaborazione di modelli interpretativi e ricostruttivi dei contesti",Analisi dati
+Terzo anno,"Studio della letteratura scientifica coerente con il progetto ed i contesti",Formazione personale
+Terzo anno,"Confronto con letteratura; tipologie e modelli archeologici esistenti",Analisi dati
+Terzo anno,"Scrittura della tesi di dottorato",Disseminazione e scrittura
+Terzo anno,"Disseminazione scientifica dei risultati definitivi (presentazioni; pubblicazioni; strumenti digitali)",Disseminazione e scrittura
